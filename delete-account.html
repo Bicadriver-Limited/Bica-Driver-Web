@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Account – BicaDriver</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#031a03;color:#fff;font-family:'Barlow',sans-serif;font-size:15px;line-height:1.8;}
+nav{background:rgba(3,26,3,0.98);padding:1rem 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,107,0,0.25);position:sticky;top:0;z-index:100;}
+.logo{font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,#ff6b00,#4caf50);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.back-btn{color:#ff8c2a;text-decoration:none;font-size:0.85rem;font-weight:600;font-family:'Montserrat',sans-serif;border:1.5px solid #ff8c2a;padding:0.45rem 1.2rem;border-radius:20px;transition:all 0.2s;}
+.back-btn:hover{background:#ff8c2a;color:#000;}
+.container{max-width:720px;margin:0 auto;padding:3rem 5%;}
+.hero-box{text-align:center;margin-bottom:3rem;}
+.warning-icon{font-size:4rem;margin-bottom:1rem;display:block;}
+h1{font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:900;color:#ff6b00;text-transform:uppercase;margin-bottom:0.6rem;}
+.subtitle{font-size:0.95rem;color:#9ab89a;max-width:500px;margin:0 auto;}
+.info-box{background:rgba(255,107,0,0.06);border:1px solid rgba(255,107,0,0.2);border-radius:14px;padding:1.8rem 2rem;margin-bottom:2rem;}
+.info-box h2{font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:800;color:#ff8c2a;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1rem;}
+.info-box ul{margin-left:1.3rem;color:#ccc;}
+.info-box ul li{margin-bottom:0.5rem;font-size:0.88rem;}
+.warning-box{background:rgba(220,50,50,0.08);border:1px solid rgba(220,50,50,0.25);border-radius:14px;padding:1.5rem 2rem;margin-bottom:2rem;}
+.warning-box h2{font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:800;color:#ff6060;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.8rem;}
+.warning-box p{color:#ffaaaa;font-size:0.88rem;line-height:1.75;}
+.steps-box{background:rgba(76,175,80,0.06);border:1px solid rgba(76,175,80,0.2);border-radius:14px;padding:1.8rem 2rem;margin-bottom:2rem;}
+.steps-box h2{font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:800;color:#81c784;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1.2rem;}
+.step{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;}
+.step-num{background:linear-gradient(135deg,#ff6b00,#ff8c2a);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:800;font-family:'Montserrat',sans-serif;flex-shrink:0;}
+.step-text{font-size:0.88rem;color:#ccc;padding-top:0.2rem;line-height:1.7;}
+.step-text strong{color:#fff;}
+.form-box{background:#0a3a0a;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:2rem;margin-bottom:2rem;}
+.form-box h2{font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1.5rem;}
+.form-group{margin-bottom:1.2rem;}
+label{display:block;font-size:0.8rem;color:#9ab89a;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.4rem;}
+input,select,textarea{width:100%;background:#052805;border:1.5px solid rgba(255,255,255,0.1);border-radius:8px;padding:0.75rem 1rem;color:#fff;font-family:'Barlow',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s;}
+input:focus,select:focus,textarea:focus{border-color:#ff6b00;}
+select option{background:#052805;}
+textarea{resize:vertical;min-height:100px;}
+.checkbox-group{display:flex;align-items:flex-start;gap:0.8rem;margin-top:0.5rem;}
+.checkbox-group input[type="checkbox"]{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:#ff6b00;}
+.checkbox-group label{font-size:0.82rem;color:#ccc;text-transform:none;letter-spacing:0;font-weight:400;}
+.submit-btn{width:100%;background:linear-gradient(135deg,#c0392b,#e74c3c);color:#fff;border:none;padding:1rem;border-radius:30px;font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:800;cursor:pointer;text-transform:uppercase;letter-spacing:0.05em;margin-top:1rem;transition:opacity 0.2s;}
+.submit-btn:hover{opacity:0.85;}
+.alt-box{background:rgba(76,175,80,0.06);border:1px solid rgba(76,175,80,0.2);border-radius:14px;padding:1.5rem 2rem;margin-bottom:2rem;text-align:center;}
+.alt-box p{color:#9ab89a;font-size:0.88rem;margin-bottom:1rem;}
+.contact-btn{display:inline-block;background:linear-gradient(135deg,#ff6b00,#ff8c2a);color:#fff;text-decoration:none;padding:0.7rem 2rem;border-radius:30px;font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;}
+footer-strip{display:block;text-align:center;padding:2rem;color:#3a5a3a;font-size:0.78rem;border-top:1px solid rgba(255,255,255,0.06);margin-top:2rem;}
+
+/* Success message */
+#successMsg{display:none;background:rgba(76,175,80,0.1);border:1px solid #4caf50;border-radius:14px;padding:2rem;text-align:center;margin-top:1.5rem;}
+#successMsg h3{font-family:'Montserrat',sans-serif;color:#81c784;font-size:1rem;text-transform:uppercase;margin-bottom:0.5rem;}
+#successMsg p{color:#9ab89a;font-size:0.88rem;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">BicaDriver</a>
+  <a href="index.html" class="back-btn">← Back to Website</a>
+</nav>
+
+<div class="container">
+  <div class="hero-box">
+    <span class="warning-icon">🗑️</span>
+    <h1>Delete Your Account</h1>
+    <p class="subtitle">We're sorry to see you go. Please read the information below carefully before proceeding with your account deletion request.</p>
+  </div>
+
+  <!-- What gets deleted -->
+  <div class="info-box">
+    <h2>📋 What Will Be Deleted</h2>
+    <ul>
+      <li>Your personal profile and account information</li>
+      <li>Your contact details (name, email, phone number)</li>
+      <li>Your activity history on the BicaDriver platform</li>
+      <li>Your saved preferences and settings</li>
+      <li>Any uploaded documents or photos linked to your account</li>
+    </ul>
+  </div>
+
+  <!-- Warning -->
+  <div class="warning-box">
+    <h2>⚠️ Important Warning</h2>
+    <p>Account deletion is <strong style="color:#fff;">permanent and cannot be undone.</strong> Once your account is deleted, you will not be able to recover any of your data, history, or account details. Any pending transactions or active engagements must be completed or cancelled before deletion can be processed.</p>
+  </div>
+
+  <!-- How it works -->
+  <div class="steps-box">
+    <h2>✅ How the Deletion Process Works</h2>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">Fill in the <strong>Account Deletion Request Form</strong> below with your registered details.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">Our team will <strong>verify your identity</strong> and review your request within 3–5 business days.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">You will receive a <strong>confirmation email</strong> once your account has been successfully deleted.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">Some data may be <strong>retained for up to 30 days</strong> for legal and regulatory compliance before permanent deletion.</div>
+    </div>
+  </div>
+
+  <!-- Request Form -->
+  <div class="form-box">
+    <h2>🗂️ Account Deletion Request Form</h2>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" />
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your registered email address" />
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" placeholder="Enter your registered phone number" />
+    </div>
+    <div class="form-group">
+      <label>Account Type</label>
+      <select>
+        <option value="">Select account type</option>
+        <option value="client">Car Owner / Client</option>
+        <option value="driver">Driver</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Reason for Deletion</label>
+      <select>
+        <option value="">Select a reason</option>
+        <option value="no-longer-needed">I no longer need the service</option>
+        <option value="found-alternative">I found an alternative service</option>
+        <option value="privacy">Privacy concerns</option>
+        <option value="bad-experience">Bad experience</option>
+        <option value="temporary">Temporarily stepping away</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Additional Comments (Optional)</label>
+      <textarea placeholder="Tell us more about why you're leaving..."></textarea>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="confirm" />
+      <label for="confirm">I understand that deleting my account is permanent and cannot be reversed. I confirm that I want to proceed with the deletion of my BicaDriver account.</label>
+    </div>
+    <button class="submit-btn" onclick="submitRequest()">Submit Deletion Request</button>
+    <div id="successMsg">
+      <h3>✅ Request Submitted Successfully</h3>
+      <p>Thank you. Your account deletion request has been received. Our team will process it and send a confirmation to your registered email within 3–5 business days.</p>
+    </div>
+  </div>
+
+  <!-- Alternative -->
+  <div class="alt-box">
+    <p>Changed your mind or need help instead? Contact our support team and we'll be happy to assist you.</p>
+    <a href="mailto:bicadriver2025@gmail.com" class="contact-btn">Contact Support</a>
+  </div>
+</div>
+
+<footer-strip>© 2026 BicaDriver. Lagos, Nigeria. All rights reserved.</footer-strip>
+
+<script>
+function submitRequest() {
+  const checkbox = document.getElementById('confirm');
+  if (!checkbox.checked) {
+    alert('Please confirm that you understand the account deletion is permanent.');
+    return;
+  }
+  document.getElementById('successMsg').style.display = 'block';
+  document.querySelector('.submit-btn').style.display = 'none';
+}
+</script>
+</body>
+</html>
