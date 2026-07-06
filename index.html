@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#042a04">
+<meta name="theme-color" content="#f7f7f2">
 <title>Bica Driver – Connect. Drive. Thrive.</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:#031a03;
-  color:#fff;
+  background:#f7f7f2;
+  color:#223123;
   font-family:'Barlow',sans-serif;
   font-size:14px;
   line-height:1.6;
@@ -143,6 +143,16 @@ nav{
   transition:all 0.2s;display:inline-block;
 }
 .btn-green:hover{background:rgba(76,175,80,0.1);border-color:#81c784;transform:translateY(-3px)}
+.btn-playstore{
+  display:inline-flex;align-items:center;gap:0.7rem;
+  background:#fff;color:#1f1f1f;padding:0.9rem 1.6rem;
+  font-weight:700;font-size:0.85rem;font-family:'Montserrat',sans-serif;
+  text-decoration:none;border-radius:30px;border:1px solid rgba(0,0,0,0.08);
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.btn-playstore:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.12)}
+.btn-playstore svg{width:20px;height:20px;flex-shrink:0}
 .hero-stats{
   display:flex;gap:2.5rem;
   padding:1.8rem 2rem;
@@ -474,6 +484,15 @@ footer{
     <p class="hero-desc">BicaDriver bridges the gap between verified, professional drivers and car owners across Lagos — reliable, trusted, and fast.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn-orange">Find a Driver</a>
+      <a href="https://play.google.com/store/apps/details?id=com.bicadriver.app" class="btn-playstore" target="_blank" rel="noopener noreferrer" aria-label="Download Bica Driver on Google Play">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 2.75V21.25L14.5 12L3 2.75Z" fill="#00C853"/>
+          <path d="M17.25 15L14.5 12L17.25 9L20.5 11.25C21.1 11.63 21.1 12.37 20.5 12.75L17.25 15Z" fill="#FFC107"/>
+          <path d="M14.5 12L3 21.25L15.5 14.75L14.5 12Z" fill="#FF3D00"/>
+          <path d="M14.5 12L3 2.75L15.5 9.25L14.5 12Z" fill="#1976D2"/>
+        </svg>
+        <span>Get it on Google Play</span>
+      </a>
       <a href="#about" class="btn-green">Learn More</a>
     </div>
     <div class="hero-stats">
